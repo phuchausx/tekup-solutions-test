@@ -1,0 +1,49 @@
+.tabs {
+    $root: &;
+  
+    &_labels {
+      border-radius: 3px;
+      overflow: auto hidden;
+      position: relative;
+      padding-top: 10px;
+      padding-bottom: 60px;
+  
+      @include adjust-flex();
+
+      @include mobile-down {
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  
+    &_label {
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 600;
+      color: $charleston-green;
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+  
+    &_tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      margin-right: 10px;
+
+      &-active {
+        background: $cyber-yellow;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .15);
+        border-radius: 8px;
+      }
+    }
+  
+    &_panel {
+      display: none;
+  
+      &-active {
+        display: block;
+      }
+    }
+  }
+  

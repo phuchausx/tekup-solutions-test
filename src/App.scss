@@ -1,0 +1,11 @@
+// Styles
+@import 'styles/common.scss';
+
+//Library
+@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+
+// Components
+@import 'components/Tabs/';
+@import 'components/ProjectCard/';
+@import 'components/ProjectList/';
+@import 'components/Container/';

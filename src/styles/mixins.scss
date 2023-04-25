@@ -1,0 +1,30 @@
+@mixin adjust-flex($justify-content: center, $align-item: center) {
+    align-items: $align-item;
+    display: flex;
+    justify-content: $justify-content;
+}
+
+// Breakpoints
+@mixin break-min($pixel) {
+  @media (min-width: $pixel) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+    @media (max-width: 1199px) {
+      @content;
+    }
+}
+
+@mixin tablet-down {
+    @media (max-width: 991px) {
+      @content;
+    }
+}
+
+@mixin mobile-down {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
