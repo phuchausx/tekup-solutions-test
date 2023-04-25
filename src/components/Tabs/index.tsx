@@ -2,11 +2,6 @@ import React from "react";
 
 import mapModifiers from "utils/functions";
 
-interface TabPanelProps {
-  active?: boolean;
-  children: React.ReactNode;
-}
-
 interface TabProps {
   label?: string;
   active?: boolean;
@@ -16,12 +11,6 @@ interface TabProps {
 interface TabsProps {
   children: React.ReactNode;
 }
-
-export const TabPanel: React.FC<TabPanelProps> = ({ active, children }) => (
-  <div className={mapModifiers("tabs_panel", active && "active")}>
-    {children}
-  </div>
-);
 
 export const Tab: React.FC<TabProps> = ({ active, label, handleClick }) => (
   <div
@@ -37,10 +26,6 @@ export const Tabs: React.FC<TabsProps> = ({ children }) => (
     <div className="tabs_labels">{children}</div>
   </div>
 );
-
-TabPanel.defaultProps = {
-  active: false,
-};
 
 Tab.defaultProps = {
   label: "",
